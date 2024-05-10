@@ -17,7 +17,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
           <span className='font-bold'>ProductPulse</span>
         </Link>
       </div>
-      <div className=" w-[50px]">
+      <div className="w-[50px]">
         <button
           onClick={() => setDarkMode(!darkMode)}
           className=" p-1 mr-3 flex items-center"
@@ -35,7 +35,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
             <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to='/jobs'>Queries</Link>
+            <Link to='/allQueries'>Queries</Link>
           </li>
 
           {!user && (
