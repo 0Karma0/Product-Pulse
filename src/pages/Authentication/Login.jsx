@@ -41,7 +41,7 @@ const Login = () => {
 
   const handleGithubSignIn = async () => {
     try {
-      // 1. google sign in from firebase
+      // 1. github sign in from firebase
       const result = await githubSignIn()
       console.log(result.user)
 

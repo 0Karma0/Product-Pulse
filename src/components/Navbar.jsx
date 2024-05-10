@@ -2,8 +2,13 @@ import { useContext } from 'react'
 import logo from '../assets/images/logo.png'
 import { AuthContext } from '../providers/AuthProvider'
 import { Link } from 'react-router-dom'
-const Navbar = () => {
+import darking from "../assets/images/dark.png";
+import lighting from "../assets/images/light.png";
+// eslint-disable-next-line react/prop-types
+const Navbar = ({ setDarkMode, darkMode }) => {
+
   const { user, logOut } = useContext(AuthContext)
+
   return (
     <div className='navbar bg-base-100 shadow-sm container px-4 mx-auto'>
       <div className='flex-1'>
@@ -11,6 +16,18 @@ const Navbar = () => {
           <img className='w-auto h-7' src={logo} alt='' />
           <span className='font-bold'>ProductPulse</span>
         </Link>
+      </div>
+      <div className=" w-[50px]">
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className=" p-1 mr-3 flex items-center"
+        >
+          <img
+            className="md:w-full   w-10 object-cover"
+            src={darkMode ? lighting : darking}
+            alt=""
+          />
+        </button>
       </div>
       <div className='flex-none'>
         <ul className='menu menu-horizontal px-1'>
