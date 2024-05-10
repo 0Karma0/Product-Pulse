@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className='flex-1'>
         <Link to='/' className='flex gap-2 items-center'>
           <img className='w-auto h-7' src={logo} alt='' />
-          <span className='font-bold'>SoloSphere</span>
+          <span className='font-bold'>ProductPulse</span>
         </Link>
       </div>
       <div className='flex-none'>
@@ -18,7 +18,7 @@ const Navbar = () => {
             <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to='/jobs'>All Jobs</Link>
+            <Link to='/jobs'>Queries</Link>
           </li>
 
           {!user && (
@@ -49,17 +49,15 @@ const Navbar = () => {
             >
               <li>
                 <Link to='/add-job' className='justify-between'>
-                  Add Job
+                  Recommendations
+                  For Me
                 </Link>
               </li>
               <li>
-                <Link to='/my-posted-jobs'>My Posted Jobs</Link>
+                <Link to='/my-posted-jobs'>My Queries</Link>
               </li>
               <li>
-                <Link to='/my-bids'>My Bids</Link>
-              </li>
-              <li>
-                <Link to='/bid-requests'>Bid Requests</Link>
+                <Link to='/my-bids'>My recommendations</Link>
               </li>
               <li className='mt-2'>
                 <button

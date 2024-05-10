@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='flex flex-col items-center text-center'>
           <div className='flex gap-2 items-center'>
             <img className='w-auto h-7' src={logo} alt='' />
-            <span>SoloSphere</span>
+            <span>ProductPulse</span>
           </div>
 
           <div className='flex flex-wrap justify-center mt-6 -mx-4'>
@@ -62,7 +62,7 @@ const Footer = () => {
 
         <div className='flex flex-col items-center sm:flex-row sm:justify-between'>
           <p className='text-sm text-gray-500 '>
-            © Copyright 2021. All Rights Reserved.
+            © Copyright 2024. All Rights Reserved.
           </p>
 
           <div className='flex -mx-2'>
