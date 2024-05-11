@@ -5,6 +5,7 @@ import Login from '../pages/Authentication/Login'
 import Register from '../pages/Authentication/Register'
 import ErrorPage from '../pages/ErrorPage'
 import AllQueries from '../pages/AllQueries'
+import MyQueries from '../pages/MyQueries'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/allQueries',
         element: <AllQueries/>,
+      },
+      {
+        path: '/myQueries',
+        element: <MyQueries></MyQueries>,
       },
     ],
   },

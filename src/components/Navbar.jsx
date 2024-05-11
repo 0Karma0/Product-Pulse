@@ -71,7 +71,7 @@ const Navbar = ({ setDarkMode, darkMode }) => {
                 </Link>
               </li>
               <li>
-                <Link to='/my-posted-jobs'>My Queries</Link>
+                <Link to='/myQueries'>My Queries</Link>
               </li>
               <li>
                 <Link to='/my-bids'>My recommendations</Link>

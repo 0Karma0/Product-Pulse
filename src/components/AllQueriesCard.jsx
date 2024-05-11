@@ -6,7 +6,7 @@ const AllQueriesCard = () => {
     const [item, setItem] = useState([]);
     // console.log(user);
     useEffect(() => {
-        fetch(`http://localhost:5000/allQueries`)
+        fetch(`${import.meta.env.VITE_API_URL}/allQueries`)
             .then((res) => res.json())
             .then((data) => {
                 setItem(data);
