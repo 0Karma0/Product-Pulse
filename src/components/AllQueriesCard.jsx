@@ -20,7 +20,7 @@ const AllQueriesCard = () => {
                     <div key={p._id}>
                         <div className="card py-3 bg-base-100 shadow-xl">
                             <figure><img className="mb-3 h-[300px] w-[350px]" src={p.Product_Image} alt="Shoes" /></figure>
-                            <div className="">
+                            <div>
                                 <h2 className="card-title">Name: {p.Query_Title}</h2>
                                 <div className="text-white mb-1">
                                     <p>Product_Name: {p.Product_Name}</p>

@@ -6,6 +6,8 @@ import Register from '../pages/Authentication/Register'
 import ErrorPage from '../pages/ErrorPage'
 import AllQueries from '../pages/AllQueries'
 import MyQueries from '../pages/MyQueries'
+import PrivateRoute from './PrivateRoute'
+import AddQueries from '../pages/AddQueries'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -26,11 +28,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/allQueries',
-        element: <AllQueries/>,
+        element: <AllQueries />,
       },
       {
         path: '/myQueries',
-        element: <MyQueries></MyQueries>,
+        element: <PrivateRoute>
+          <MyQueries></MyQueries>
+        </PrivateRoute>,
+      },
+      {
+        path: '/addQueries',
+        element: <PrivateRoute>
+          <AddQueries></AddQueries>
+        </PrivateRoute>,
       },
     ],
   },
