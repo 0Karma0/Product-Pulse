@@ -4,7 +4,7 @@ import MyQueriesCarousel from "../components/MyQueriesCarousel";
 
 const MyQueries = () => {
     return (
-        <div>
+        <div className="py-8">
             <MyQueriesCarousel></MyQueriesCarousel>
             <MyQueriesCard></MyQueriesCard>
         </div>
