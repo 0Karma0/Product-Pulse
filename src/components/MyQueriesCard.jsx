@@ -45,7 +45,7 @@ const MyQueriesCard = () => {
             }
         })
 
-    }
+    };
 
     return (
         <div className="gadgetContainer pt-10 grid md:grid-cols-3 gap-4 mt-8">
