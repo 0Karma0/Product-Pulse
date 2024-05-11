@@ -9,6 +9,7 @@ import MyQueries from '../pages/MyQueries'
 import PrivateRoute from './PrivateRoute'
 import AddQueries from '../pages/AddQueries'
 import UpdateQueries from '../pages/UpdateQueries'
+import MyQueriesDetails from '../pages/MyQueriesDetails'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -48,6 +49,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateQueries></UpdateQueries>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myQueryDetails/:id",
+        element: (
+          <PrivateRoute>
+            <MyQueriesDetails></MyQueriesDetails>
           </PrivateRoute>
         ),
       },

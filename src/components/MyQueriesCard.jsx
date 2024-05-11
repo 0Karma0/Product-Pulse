@@ -74,7 +74,7 @@ const MyQueriesCard = () => {
                                 <div className="card-actions justify-between">
                                     <Link to={`/products/${p._id}`}><button className="btn btn-primary">Update</button></Link>
                                     <button onClick={() => handleDelete(p._id)} className="btn btn-secondary">Delete</button>
-                                    <Link to={`/queryDetails/${p._id}`}><button className="btn btn-primary">View Details</button></Link>
+                                    <Link to={`/myQueryDetails/${p._id}`}><button className="btn btn-primary">View Details</button></Link>
                                 </div>
                             </div>
                         </div>
