@@ -1,8 +1,23 @@
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 const UpdateQueries = () => {
+
+    const { id } = useParams();
+    console.log(id);
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        fetch(`${import.meta.env.VITE_API_URL}/singleProduct/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                setProduct(data);
+                console.log(data);
+            })
+    }, [id])
 
     const { user } = useAuth() || {};
     const handleUpdateProduct = (e) => {
@@ -21,15 +36,15 @@ const UpdateQueries = () => {
 
         const info = { displayName, Product_Name, image, Product_Brand, email, Boycotting_Reason_Details, Query_Title, photoURL };
 
-        fetch(`${import.meta.env.VITE_API_URL}/addQueries`, {
-            method: "POST",
+        fetch(`${import.meta.env.VITE_API_URL}/updateProduct/${id}`, {
+            method: "PUT",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(info)
         })
             .then(res => res.json())
             .then(data => {
-                if (data?.insertedId) {
-                    Swal.fire("Your Product has been added");
+                if (data?.modifiedCount> 0) {
+                    Swal.fire("Your Product has been Updated");
                 }
             })
 
@@ -46,7 +61,7 @@ const UpdateQueries = () => {
                         </span>
                         <span className="dark:text-white">
                             <span className="text-[#8049ff]">
-                                Add-
+                                Update-
                             </span>
                             Your Product
                         </span>
@@ -65,6 +80,7 @@ const UpdateQueries = () => {
                                 placeholder="Product Name"
                                 id="Product_Name"
                                 name="Product_Name"
+                                defaultValue={product.Product_Name}
                             />
 
                             <label className="block mb-2 dark:text-white" htmlFor="Product Name">
@@ -76,6 +92,7 @@ const UpdateQueries = () => {
                                 placeholder="Product Brand"
                                 id="Product_Brand"
                                 name="Product_Brand"
+                                defaultValue={product.Product_Brand}
                             />
 
                             <label
@@ -90,6 +107,7 @@ const UpdateQueries = () => {
                                 placeholder="Query_Title"
                                 id="Query_Title"
                                 name="Query_Title"
+                                defaultValue={product.Query_Title}
                             />
 
                         </div>
@@ -104,6 +122,7 @@ const UpdateQueries = () => {
                                 placeholder="Enter Image URL"
                                 id="image"
                                 name="image"
+                                defaultValue={product.image}
                             />
                             <label
                                 className="block mt-4 mb-2 dark:text-white"
@@ -117,6 +136,7 @@ const UpdateQueries = () => {
                                 className="w-full p-2 border rounded-md focus:text-[#8049ff]"
                                 type="text"
                                 placeholder="Boycotting_Reason_Details"
+                                defaultValue={product.Boycotting_Reason_Details}
                             >
                             </input>
                         </div>
@@ -127,7 +147,7 @@ const UpdateQueries = () => {
                     <input
                         className="px-4 w-full py-2 mt-4 rounded hover:bg-[#4331ab]  bg-[#8049ff] duration-200 text-white cursor-pointer font-semibold"
                         type="submit"
-                        value="Add Product"
+                        value="Update Product"
                     />
                 </form>
             </div>

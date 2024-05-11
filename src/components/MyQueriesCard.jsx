@@ -28,7 +28,7 @@ const MyQueriesCard = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://arts-and-crafts.vercel.app/delete/${_id}`, {
+                fetch(`${import.meta.env.VITE_API_URL}/delete/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

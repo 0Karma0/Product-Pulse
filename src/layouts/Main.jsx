@@ -4,9 +4,9 @@ import Footer from '../components/Footer'
 import { useState } from 'react';
 
 const Main = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   return (
-    <div>
+    <div className={`${darkMode ? "dark" : ""} dark:bg-[#0F172A] h-screen`}>
       {/* Navbar */}
       <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
       {/* Outlet */}
