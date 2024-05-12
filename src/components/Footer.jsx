@@ -1,4 +1,4 @@
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logo.jpg'
 const Footer = () => {
   return (
     <footer className='bg-white shadow-sm'>

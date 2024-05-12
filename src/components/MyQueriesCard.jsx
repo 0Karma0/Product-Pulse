@@ -28,7 +28,7 @@ const MyQueriesCard = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`${import.meta.env.VITE_API_URL}/delete/${_id}`, {
+                fetch(`${import.meta.env.VITE_API_URL}/deleted/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -37,7 +37,7 @@ const MyQueriesCard = () => {
                             setControl(!control)
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your Art has been deleted.",
+                                text: "Your Product has been deleted.",
                                 icon: "success"
                             });
                         }

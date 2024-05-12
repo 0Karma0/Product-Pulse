@@ -15,8 +15,8 @@ const Home = () => {
       <div className="gadgetContainer py-24 mt-20 bg-gradient-to-r from-[#F9F3F0] from-100% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
         {/* header */}
         <div className="text-center md:text-left ">
-          <p className="font-semibold text-[#FF497C] mb-3 text-center md:text-left">
-            <span className="bg-[#FF497C] text-white mr-3 text-xl px-2 py-1 rounded-full">
+          <p className="font-semibold text-white mb-3 text-center md:text-left">
+            <span className="bg-[#c00a3d] text-white mr-3 text-xl px-2 py-1 rounded-full">
               <i className='bx bxs-quote-single-left'></i>
             </span>
             Testimonial
@@ -70,8 +70,8 @@ const Home = () => {
       <div className="gadgetContainer mb-5">
         {/* header */}
         <div className="text-center md:text-left mt-20">
-          <p className="font-semibold text-[#FF497C] mb-3 text-center md:text-left">
-            <span className="bg-[#FF497C] text-white mr-3 text-xl px-2 py-1 rounded-full">
+          <p className="font-semibold text-white mb-3 text-center md:text-left">
+            <span className="bg-[#c00a3d] text-white mr-3 text-xl px-2 py-1 rounded-full">
               <i className="bx bxs-like"></i>
             </span>
             Why Us

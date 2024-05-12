@@ -40,7 +40,7 @@ const MyRecommendation = () => {
                             setControl(!control)
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your Art has been deleted.",
+                                text: "Your Product has been deleted.",
                                 icon: "success"
                             });
                         }
