@@ -12,6 +12,7 @@ import UpdateQueries from '../pages/UpdateQueries'
 import MyQueriesDetails from '../pages/MyQueriesDetails'
 import AllQueriesDetails from '../pages/AllQueriesDetails'
 import MyRecommendation from '../pages/MyRecommendation'
+import RecommendationsFroMe from '../pages/RecommendationsFroMe'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -75,6 +76,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyRecommendation></MyRecommendation>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/recommendationForMe",
+        element: (
+          <PrivateRoute>
+            <RecommendationsFroMe></RecommendationsFroMe>
           </PrivateRoute>
         ),
       },
