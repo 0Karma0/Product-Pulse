@@ -12,9 +12,9 @@ const AddQueries = () => {
         const Product_Brand = e.target.Product_Brand.value;
         const Boycotting_Reason_Details = e.target.Boycotting_Reason_Details.value;
         const Query_Title = e.target.Query_Title.value;
-        const email = user.email;
-        const displayName = user.displayName;
-        const photoURL = user.photoURL;
+        const email = user?.email;
+        const displayName = user?.displayName;
+        const photoURL = user?.photoURL;
 
         // console.log(name, price, image, type)
 
@@ -79,7 +79,7 @@ const AddQueries = () => {
 
                             <label
                                 className="block mt-4 mb-2 dark:text-white"
-                                htmlFor="price"
+                                htmlFor="Query_Title"
                             >
                                 Query Title
                             </label>
