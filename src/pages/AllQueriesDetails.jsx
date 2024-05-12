@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AllQueriesDetailsForm from "./AllQueriesDetailsForm";
+import RecommendationsFroMe from "./RecommendationsFroMe";
 
 
 const AllQueriesDetails = () => {
@@ -40,6 +41,8 @@ const AllQueriesDetails = () => {
                 </div>
             </div>
             <AllQueriesDetailsForm></AllQueriesDetailsForm>
+            <h1 className="text-3xl text-center my-4">All Recommendations</h1>
+            <RecommendationsFroMe></RecommendationsFroMe>
         </div >
     );
 };
