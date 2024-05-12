@@ -28,6 +28,14 @@ const AllQueriesDetails = () => {
                         <p>Query_Title: {item.Query_Title}</p>
                         <p>Alternation_Reason: {item.Alternation_Reason}</p>
                         <p>recommendationCount: {item.recommendationCount}</p>
+                        <div className="flex">
+                            <p className="mt-3">name: {item?.User_Info?.name}</p>
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src={item?.User_Info?.thumbnail} />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

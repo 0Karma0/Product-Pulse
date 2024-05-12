@@ -6,23 +6,20 @@ import useAuth from "../hooks/useAuth";
 const AllQueriesDetailsForm = () => {
 
 
-
     const { user } = useAuth() || {};
     const handleAddForm = (e) => {
         e.preventDefault();
         const form = e.target;
         const Query_Title = form.Query_Title.value;
         const Recommendation_reason = form.Recommendation_reason.value;
-        const Boycotting_Reason_Details = form.Boycotting_Reason_Details.value;
-        const Comment = form.Comment.value;
+        const Product_name = form.Product_name.value;
+        const Product_Image = form.Product_Image.value;
         const email = user?.email;
         const displayName = user?.displayName;
         const photoURL = user?.photoURL;
 
-        console.log(Query_Title, Recommendation_reason, Boycotting_Reason_Details, Comment)
 
-        const info = { displayName, Query_Title, Recommendation_reason, email, Boycotting_Reason_Details, Comment, photoURL };
-        console.log(info);
+        const info = { displayName, Query_Title, Recommendation_reason, email, Product_name, Product_Image, photoURL };
 
         fetch(`${import.meta.env.VITE_API_URL}/recommendQueries`, {
             method: "POST",
@@ -32,7 +29,7 @@ const AllQueriesDetailsForm = () => {
             .then(res => res.json())
             .then(data => {
                 if (data?.insertedId) {
-                    Swal.fire("Your Product has been added");
+                    Swal.fire("Your Recommendation has been added");
                 }
             })
     };
@@ -71,30 +68,30 @@ const AllQueriesDetailsForm = () => {
 
                         <label
                             className="block mt-4 mb-2 dark:text-white"
-                            htmlFor="Boycotting_Reason_Details"
+                            htmlFor="Product_name"
                         >
-                            Boycotting_Reason_Details
+                            Product_name
                         </label>
                         <input
                             className="w-full p-2 border rounded-md focus:text-[#8049ff]"
                             type="text"
-                            placeholder="Boycotting_Reason_Details"
-                            id="Boycotting_Reason_Details"
-                            name="Boycotting_Reason_Details"
+                            placeholder="Product_name"
+                            id="Product_name"
+                            name="Product_name"
                         />
 
                     </div>
                     {/* Right side */}
                     <div className="flex-1">
-                        <label className="block mb-2 dark:text-white" htmlFor="Comment">
-                            Comment
+                        <label className="block mb-2 dark:text-white" htmlFor="Product_Image">
+                            Product_Image
                         </label>
                         <input
                             className="w-full p-2 border rounded-md focus:text-[#8049ff]"
                             type="text"
-                            placeholder="Comment"
-                            id="Comment"
-                            name="Comment"
+                            placeholder="Product_Image"
+                            id="Product_Image"
+                            name="Product_Image"
                         />
                     </div>
                 </div>
