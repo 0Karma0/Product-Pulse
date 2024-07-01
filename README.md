@@ -1,8 +1,16 @@
-# React + Vite
+# Products-Pulse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Live Link: https://product-pulse-d6991.web.app
+- back-end link: https://github.com/mahadi-zulfiker/Product-Pulse-Back-end
 
-Currently, two official plugins are available:
+Welcome to Product Pulse, your ultimate destination for in-depth product reviews, insights, and comparisons. Our platform is dedicated to helping consumers make informed decisions by providing comprehensive evaluations and expert opinions on a wide range of products. Whether you're shopping for the latest tech gadgets, home appliances, or lifestyle essentials, Product Pulse offers detailed analysis, user feedback, and up-to-date information. Stay ahead of the curve with our curated recommendations and find the best products that meet your needs and preferences. Trust Product Pulse to keep you informed and confident in your purchasing choices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features: 
+- user can add there products
+- anyone can see all the products of the website & recommend the products they like
+- user can update & delete there products.
+
+Tips to run the website locally:
+- download zip or use git clone - *link*
+- npm i [to install all the dependencies.]
+- npm run dev
