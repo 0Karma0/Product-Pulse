@@ -10,6 +10,12 @@ Features:
 - anyone can see all the products of the website & recommend the products they like
 - user can update & delete there products.
 
+Technologies:
+- firebase
+- reactjs
+- axios
+- tailwindcss
+
 Tips to run the website locally:
 - download zip or use git clone - *link*
 - npm i [to install all the dependencies.]
